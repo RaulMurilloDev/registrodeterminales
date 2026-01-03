@@ -14,3 +14,13 @@ Funciones:
 Notas:
 - Si tu cámara no aparece, desconecta otras apps que la estén usando (Teams, Zoom, Camera).
 - Para cámaras industriales, es posible que necesites ajustar backend en `camera_service.py` (MSMF/DSHOW).
+
+
+para empaquetar utilizar:
+source .venv/bin/activate
+rm -rf build/ dist/
+
+pyinstaller --onefile --name CamaraDeterminales \
+  --collect-all PIL \
+  --collect-all ttkbootstrap \
+  main.py
