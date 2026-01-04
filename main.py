@@ -283,10 +283,13 @@ class App:
             return
 
         part_number = self.part_entry.get().strip()
+
+        # Uncomment for regular app.
         if not part_number:
             messagebox.showerror("Error", "Ingresa un número de parte / Kanban")
             self.part_entry.focus()
             return
+        
 
         # Crear nombre de archivo
         now = datetime.datetime.now()
@@ -311,7 +314,8 @@ class App:
             self.capture_count += 1
             self.counter_label.config(text=f"Capturas: {self.capture_count}")
             
-            # Mostrar confirmación
+            # Mostrar confirmación 
+            # Uncomment for regular app
             messagebox.showinfo("✅ Captura exitosa", 
                               f"Imagen guardada en:\n{filepath}")
             
