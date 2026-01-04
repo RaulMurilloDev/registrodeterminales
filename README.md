@@ -16,7 +16,7 @@ Notas:
 - Para cámaras industriales, es posible que necesites ajustar backend en `camera_service.py` (MSMF/DSHOW).
 
 
-para empaquetar utilizar:
+# para empaquetar para linux debian & probablemente otras distros utilizar:
 source .venv/bin/activate
 rm -rf build/ dist/
 
@@ -24,3 +24,5 @@ pyinstaller --onefile --name CamaraDeterminales \
   --collect-all PIL \
   --collect-all ttkbootstrap \
   main.py
+
+  el ejecutable esta en la carpeta /dist
