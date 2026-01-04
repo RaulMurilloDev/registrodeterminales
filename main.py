@@ -285,10 +285,10 @@ class App:
         part_number = self.part_entry.get().strip()
 
         # Uncomment for regular app.
-        if not part_number:
-            messagebox.showerror("Error", "Ingresa un número de parte / Kanban")
-            self.part_entry.focus()
-            return
+        # if not part_number:
+        #     messagebox.showerror("Error", "Ingresa un número de parte / Kanban")
+        #     self.part_entry.focus()
+        #     return
         
 
         # Crear nombre de archivo
@@ -316,8 +316,8 @@ class App:
             
             # Mostrar confirmación 
             # Uncomment for regular app
-            messagebox.showinfo("✅ Captura exitosa", 
-                              f"Imagen guardada en:\n{filepath}")
+            # messagebox.showinfo("✅ Captura exitosa", 
+            #                   f"Imagen guardada en:\n{filepath}")
             
             # Limpiar campo y preparar para siguiente captura
             self.part_entry.delete(0, "end")
